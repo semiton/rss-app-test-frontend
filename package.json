@@ -1,0 +1,106 @@
+{
+    "name": "rss-app-test-frontend",
+    "description": "rss-app-test-frontend",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "build-dev": "vue-cli-service --mode development build",
+        "watch-dev": "vue-cli-service --mode development --watch build",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "axios": "^0.19.2",
+        "core-js": "^3.6.5",
+        "vue": "^2.6.11",
+        "vue-extend-layout": "^2.0.6",
+        "vue-material": "^1.0.0-beta-13",
+        "vue-router": "^3.2.0",
+        "vuex": "^3.4.0",
+        "date-fns": "^2.14.0"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^4.1.0",
+        "@vue/cli-plugin-eslint": "^4.1.0",
+        "@vue/cli-plugin-router": "^4.1.0",
+        "@vue/cli-plugin-vuex": "^4.1.0",
+        "@vue/cli-service": "^4.1.0",
+        "@vue/eslint-config-airbnb": "^4.0.0",
+        "babel-eslint": "^10.0.3",
+        "eslint": "^5.16.0",
+        "eslint-plugin-vue": "^5.0.0",
+        "lint-staged": "^9.5.0",
+        "node-sass": "^4.12.0",
+        "sass-loader": "^8.0.0",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "@vue/airbnb"
+        ],
+        "rules": {
+            "indent": [
+                "error",
+                4
+            ],
+            "max-len": [
+                "error",
+                {
+                    "code": 120,
+                    "tabWidth": 4,
+                    "ignoreComments": true,
+                    "ignoreStrings": true,
+                    "ignoreRegExpLiterals": true
+                }
+            ],
+            "no-param-reassign": [
+                "error",
+                {
+                    "props": false
+                }
+            ],
+            "no-trailing-spaces": [
+                "error",
+                {
+                    "skipBlankLines": true,
+                    "ignoreComments": true
+                }
+            ],
+            "no-console": "off",
+            "object-curly-newline": "off",
+            "no-underscore-dangle": "off",
+            "no-plusplus": "off",
+            "prefer-destructuring": "off",
+            "import/extensions": [
+                "js",
+                "mjs",
+                "jsx",
+                "ts",
+                "tsx",
+                "vue"
+            ]
+        },
+        "parserOptions": {
+            "parser": "babel-eslint"
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions"
+    ],
+    "gitHooks": {
+        "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,vue}": [
+            "vue-cli-service lint",
+            "git add"
+        ]
+    }
+}
